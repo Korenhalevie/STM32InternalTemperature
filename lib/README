@@ -1,0 +1,37 @@
+# STM32InternalTemperature
+
+A library and example to measure the **internal temperature** of STM32 microcontrollers using the **Arduino Framework**.
+
+## Overview
+
+This project demonstrates how to utilize the **internal temperature sensor** in STM32 microcontrollers. The code is written in C++ using an object-oriented approach and is designed to be compatible with the **Arduino Framework**. 
+
+It reads the internal temperature sensor, calculates the temperature in both Celsius (°C) and Fahrenheit (°F), and outputs the results to the serial monitor.
+
+## Features
+
+- Reads the **internal temperature sensor** of STM32 microcontrollers.
+- Converts and displays the temperature in **Celsius** and **Fahrenheit**.
+- Object-Oriented Design for easy reuse and scalability.
+- Compatible with the **Arduino IDE** and **Arduino Framework**.
+
+## Compatibility
+
+This code is designed for STM32 microcontrollers and has been tested with the **STM32F4 series** (e.g., STM32F401CCU6). It should work with most STM32 devices that include an internal temperature sensor.
+
+## Getting Started
+
+### Prerequisites
+
+- **STM32 microcontroller** (e.g., STM32F401, STM32F103, etc.).
+- **Arduino IDE** or a compatible environment (e.g., PlatformIO).
+- **STM32duino** library installed in the Arduino IDE.
+- An **STLink programmer** for uploading and debugging.
+
+### Configuration for STLink and Serial Output
+
+If you are using **PlatformIO**, add the following configuration to your `platformio.ini` file to enable uploading via STLink and Serial communication:
+
+```ini
+upload_protocol = stlink
+build_flags = -D PIO_FRAMEWORK_ARDUINO_ENABLE_CDC
